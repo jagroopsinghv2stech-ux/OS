@@ -1,0 +1,50 @@
+.window {
+  width: 800px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.63);
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  /* box-shadow: 0 5px 20px rgba(0,0,0,0.3); */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  /* Fix drag artifacts */
+  outline: none; /* removes focus outline */
+  backface-visibility: hidden; /* fixes ghost borders */
+  -webkit-backface-visibility: hidden;
+}
+
+
+.window-header {
+  height: 32px;
+  background: #26292b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  cursor: move;
+  user-select: none;
+}
+
+.window-title {
+  font-weight: bold;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.window-content {
+  flex: 1;
+  padding: 8px;
+  overflow: auto;
+  background-color: rgb(34 28 28);
+}

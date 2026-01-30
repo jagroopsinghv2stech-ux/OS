@@ -1,0 +1,28 @@
+<div class="desktop">
+
+    
+    <div class="folder" cdkDrag (click)="openResume()">
+        <img src="/images/folder.png" alt="folder" cdkDragHandle>
+        <p>Resume</p>
+    </div>
+    <div class="folder" cdkDrag (click)="openTerminal()">
+        <img src="/images/folder.png" alt="folder" cdkDragHandle>
+        <p>Files</p>
+    </div>
+
+    <div class="taskbar">
+        <div class="app">
+            <img src="/images/terminal.png" alt="terminal" (click)="openTerminal()">
+        </div>
+        <div class="app">
+            <img src="/images/safari.png" alt="terminal" (click)="openBrowser()">
+        </div>
+        <div class="app">
+            <img src="/images/photos.png" alt="terminal" (click)="openTerminal()">
+        </div>
+        <div class="app">
+            <img src="/images/finder.png" alt="terminal" (click)="openTerminal()">
+        </div>
+    </div>
+
+</div>

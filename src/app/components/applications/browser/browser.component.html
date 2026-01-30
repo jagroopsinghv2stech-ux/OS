@@ -1,0 +1,39 @@
+<div class="browser-container">
+
+  <!-- HOME -->
+  <div *ngIf="mode === 'home'" class="home">
+
+    <div class="search-box">
+      <input
+        [(ngModel)]="query"
+        (keyup.enter)="search(query)"
+        placeholder="Search Google"
+      />
+      <button (click)="search(query)">Search</button>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div *ngIf="mode === 'results'" class="results">
+    <div class="top-search">
+      <input
+        [(ngModel)]="query"
+        (keyup.enter)="search(query)"
+      />
+      <button (click)="search(query)">Search</button>
+    </div>
+
+    <div *ngFor="let item of results">
+      <div *ngIf="item.FirstURL" class="result-item" (click)="openLink(item.FirstURL)">
+        <h3>{{ item.Text }}</h3>
+        <p>{{ item.FirstURL }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEB -->
+  <div *ngIf="mode === 'web'" class="iframe-container">
+    <iframe [src]="url" frameborder="0"></iframe>
+  </div>
+
+</div>

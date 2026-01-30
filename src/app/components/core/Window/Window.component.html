@@ -1,0 +1,12 @@
+ <div class="window" cdkDrag>
+      <!-- Header / Title Bar -->
+      <div class="window-header" cdkDragHandle>
+        <span class="window-title">{{ title }}</span>
+        <button class="close-btn" (click)="close()">✕</button>
+      </div>
+
+      <!-- Window Content -->
+      <div class="window-content">
+        <ng-template #dynamicContent></ng-template>
+      </div>
+    </div>
